@@ -2,13 +2,11 @@ var move = 0;
 
 if (keyboard_check(vk_left)) {
     move -= 1;
-    sprite_index = spr_PlayerWalk;
     image_speed = 0.2;
     image_xscale = -1;
 }
 if (keyboard_check(vk_right)) {
     move += 1;
-    sprite_index = spr_PlayerWalk;
     image_speed = 0.2;
     image_xscale = 1;
 }

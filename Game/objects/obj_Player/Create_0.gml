@@ -5,3 +5,4 @@ gravidade = 0.5;
 pulo = 7;
 
 chao = false; 
+escada = false
