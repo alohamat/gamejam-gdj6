@@ -12,18 +12,18 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"6e16f927-dbee-4660-a6c6-c5a180591754","name":"6e16f927-dbee-4660-a6c6-c5a180591754","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8e82e222-52ca-4473-9ee7-bd60304b075b","name":"8e82e222-52ca-4473-9ee7-bd60304b075b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":17,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"af7eb696-8b4b-4e6e-85f1-25b3487c6551","blendMode":0,"displayName":"default","isLocked":false,"name":"af7eb696-8b4b-4e6e-85f1-25b3487c6551","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"e0ac13e7-3b22-4e34-808e-33779a0c4530","blendMode":0,"displayName":"default","isLocked":false,"name":"e0ac13e7-3b22-4e34-808e-33779a0c4530","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_player_rastejando",
   "nineSlice":null,
-  "origin":1,
+  "origin":0,
   "parent":{
     "name":"Sprite",
     "path":"folders/Sprite.yy",
@@ -69,13 +69,13 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6e16f927-dbee-4660-a6c6-c5a180591754","path":"sprites/spr_player_rastejando/spr_player_rastejando.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"db41cfcb-c472-4f04-8505-2262ee900b24","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8e82e222-52ca-4473-9ee7-bd60304b075b","path":"sprites/spr_player_rastejando/spr_player_rastejando.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"f35f7533-5a18-476d-9359-87fbc6a45aa6","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":20,
+    "xorigin":0,
     "yorigin":0,
   },
   "swatchColours":null,
