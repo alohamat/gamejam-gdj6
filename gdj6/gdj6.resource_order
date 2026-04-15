@@ -1,0 +1,16 @@
+{
+  "FolderOrderSettings":[
+    {"name":"Rooms","order":3,"path":"folders/Rooms.yy",},
+    {"name":"Objects","order":1,"path":"folders/Objects.yy",},
+    {"name":"Sprite","order":2,"path":"folders/Sprite.yy",},
+  ],
+  "ResourceOrderSettings":[
+    {"name":"obj_ataque","order":2,"path":"objects/obj_ataque/obj_ataque.yy",},
+    {"name":"obj_chao","order":1,"path":"objects/obj_chao/obj_chao.yy",},
+    {"name":"obj_guarda","order":4,"path":"objects/obj_guarda/obj_guarda.yy",},
+    {"name":"par_enemy","order":3,"path":"objects/par_enemy/par_enemy.yy",},
+    {"name":"spr_ataque","order":4,"path":"sprites/spr_ataque/spr_ataque.yy",},
+    {"name":"spr_chao","order":1,"path":"sprites/spr_chao/spr_chao.yy",},
+    {"name":"spr_enemy","order":3,"path":"sprites/spr_enemy/spr_enemy.yy",},
+  ],
+}
