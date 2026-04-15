@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"gdj6",
-    "path":"gdj6.yyp",
+    "name":"Sprite",
+    "path":"folders/Sprite.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

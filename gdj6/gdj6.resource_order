@@ -1,5 +1,6 @@
 {
   "FolderOrderSettings":[
+    {"name":"Tileset","order":6,"path":"folders/Tileset.yy",},
     {"name":"Objects","order":1,"path":"folders/Objects.yy",},
     {"name":"Rooms","order":3,"path":"folders/Rooms.yy",},
     {"name":"Sprite","order":2,"path":"folders/Sprite.yy",},
@@ -10,8 +11,12 @@
     {"name":"obj_guarda","order":4,"path":"objects/obj_guarda/obj_guarda.yy",},
     {"name":"par_enemy","order":3,"path":"objects/par_enemy/par_enemy.yy",},
     {"name":"spr_ataque","order":4,"path":"sprites/spr_ataque/spr_ataque.yy",},
+    {"name":"spr_bgmuro","order":8,"path":"sprites/spr_bgmuro/spr_bgmuro.yy",},
+    {"name":"spr_bgpredio","order":7,"path":"sprites/spr_bgpredio/spr_bgpredio.yy",},
     {"name":"spr_chao","order":1,"path":"sprites/spr_chao/spr_chao.yy",},
-    {"name":"spr_enemy_hit","order":4,"path":"sprites/spr_enemy_hit/spr_enemy_hit.yy",},
-    {"name":"spr_enemy","order":3,"path":"sprites/spr_enemy/spr_enemy.yy",},
+    {"name":"spr_enemy_hit","order":3,"path":"sprites/spr_enemy_hit/spr_enemy_hit.yy",},
+    {"name":"spr_enemy","order":2,"path":"sprites/spr_enemy/spr_enemy.yy",},
+    {"name":"spr_neblina","order":9,"path":"sprites/spr_neblina/spr_neblina.yy",},
+    {"name":"spr_tileset","order":5,"path":"sprites/spr_tileset/spr_tileset.yy",},
   ],
 }
