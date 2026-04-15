@@ -4,4 +4,5 @@ if hit=0 && hitcool=0
 	sprite_index=hitsprite
 	
 	HP-=other.STR
+	alarm[0]=30
 }

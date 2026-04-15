@@ -2,7 +2,7 @@
 
 move =-keyboard_check(vk_left)+keyboard_check(vk_right)
 
-hsp =1*move
+hsp =3*move
 
 if place_meeting(x+hsp,y,obj_chao)
 {

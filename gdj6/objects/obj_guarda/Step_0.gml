@@ -1,6 +1,11 @@
 event_inherited();
 
+spd=2
+if hit=0
+{
+	
 if obj_player.x>x
-{x+=2}else{x-=2}
+{x+=spd image_xscale=-1}else{x-=spd image_xscale=1}
 
-if hit=0{sprite_index=spr_enemy}
+sprite_index=spr_enemy
+}
