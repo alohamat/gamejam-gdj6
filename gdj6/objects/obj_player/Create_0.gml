@@ -1,6 +1,8 @@
 hsp=0;
 vsp=0;
 attack = 0;
+hit = 0;
+hp = 50;
 
 spd = 3;
 is_crouching = false;

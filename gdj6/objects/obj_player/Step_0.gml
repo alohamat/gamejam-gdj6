@@ -31,10 +31,13 @@ if (wall_jump_timer > 0) {
 
 // --- MOVIMENTO HORIZONTAL ---
 move = -keyboard_check(vk_left) + keyboard_check(vk_right);
+if hit=0
+{
 if is_climbing || place_meeting(x, y+1, obj_chao) {
     hsp = spd * move;
 } else {
     hsp += (spd * move - hsp) * 0.1;
+	}
 }
 if place_meeting(x+hsp, y, obj_chao) || place_meeting(x+hsp, y, obj_parede) {
     while !place_meeting(x+sign(hsp), y, obj_chao) && !place_meeting(x+sign(hsp), y, obj_parede) {
