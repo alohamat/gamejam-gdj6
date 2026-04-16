@@ -98,7 +98,13 @@ if keyboard_check_pressed(ord("X")) && attack == 0 && hit==0{
 
 if hitcool > 0{hitcool-=1}
 
-if hit=0{sprite_index=spr_player}
+if hit==0 {
+    if is_crouching {
+        sprite_index = spr_player_rastejando;
+    } else {
+        sprite_index = spr_player;
+    }
+}
 
 depth =-99999
 

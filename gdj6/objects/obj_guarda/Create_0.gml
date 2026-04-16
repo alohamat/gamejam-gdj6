@@ -5,17 +5,17 @@ enum GUARD_STATE {
 }
 
 state       = GUARD_STATE.PATROL
-spd         = 1.5
-spd_attack  = 2.8
+spd         = 0.5
+spd_attack  = 1.2
 HP = 100;
 STR = 20;
+hit = 0;
 hitcool = 0;
 
-// Patrulha senoidal
-patrol_x_speed = 1.5   // velocidade horizontal
-patrol_sine_amp = 40   // amplitude vertical (o quanto ondula)
-patrol_sine_spd = 0.04 // frequência da onda
-patrol_sine_t   = 0    // tempo acumulado
+patrol_dir        = 1      // 1 = direita, -1 = esquerda
+patrol_walk_timer = 120    // quanto tempo anda (2 segundos)
+patrol_idle_timer = 0      // quanto tempo fica parado
+patrol_is_idle    = false
 
 // Visão
 vision_range = 220     // distância máxima do cone

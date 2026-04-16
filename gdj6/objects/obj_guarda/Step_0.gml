@@ -15,20 +15,27 @@ var can_see_player = (dist < vision_range) && (angle_diff < vision_angle / 2) &&
 // --- STATE MACHINE ---
 switch (state) {
 
-  case GUARD_STATE.PATROL:
-    // Onda senoidal só na velocidade horizontal
-    patrol_sine_t += patrol_sine_spd;
-    var sine_speed = sin(patrol_sine_t) * patrol_x_speed;
-    x += sine_speed;
+ case GUARD_STATE.PATROL:
+    if patrol_is_idle {
+        // Parado, contando pra andar de novo
+        patrol_idle_timer--;
+        if patrol_idle_timer <= 0 {
+            patrol_is_idle = false;
+            patrol_dir = -patrol_dir; // vira de lado
+            patrol_walk_timer = irandom_range(90, 180);
+        }
+    } else {
+        // Andando
+        x += spd * patrol_dir;
+        patrol_walk_timer--;
 
-    // Inverte direção nas bordas da room
-    if x > room_width - 32 { patrol_sine_t = -patrol_sine_t; x = room_width - 32; }
-    if x < 32              { patrol_sine_t = -patrol_sine_t; x = 32; }
+        if patrol_walk_timer <= 0 || x > room_width - 32 || x < 32 {
+            patrol_is_idle    = true;
+            patrol_idle_timer = irandom_range(60, 120); // para entre 1~2 segundos
+        }
+    }
 
-    // Sprite vira conforme direção atual
-    if sine_speed > 0.1       { image_xscale = -1; }
-    else if sine_speed < -0.1 { image_xscale =  1; }
-
+    image_xscale = (patrol_dir > 0) ? -1 : 1;
     sprite_index = spr_enemy;
 
     if can_see_player {
