@@ -1,18 +1,25 @@
-hsp=0;
-vsp=0;
+hsp = 0;
+vsp = 0;
+
 attack = 0;
 hit = 0;
-hitcool = 0;
+hitcool = 50;
+
 hidden = false;
 HP = 100;
-hitcool=50
-spd = 3;
+
 is_crouching = false;
 is_climbing = false;
-wall_jump_timer = 0;  // 0 = pode escalar, >0 = acabou de pular
+wall_jump_timer = 0;
 can_stand = true;
 
-// guarda as dimensões originais da hitbox
+form = "human";
+
+spd_human = 2.2;
+spd_werewolf = 3.2;
+jump_power = -7;
+climb_speed = 2;
+
 mask_normal_x1 = bbox_left - x;
 mask_normal_y1 = bbox_top - y;
 mask_normal_x2 = bbox_right - x;

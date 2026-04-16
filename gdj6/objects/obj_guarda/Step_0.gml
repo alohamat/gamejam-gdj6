@@ -9,8 +9,15 @@ var angle_to_player = point_direction(x, y, px, py);
 var facing_angle    = (image_xscale < 0) ? 0 : 180; // olhando direita = 0°, esquerda = 180°
 var angle_diff      = abs(angle_difference(facing_angle, angle_to_player));
 
-var player_hidden = obj_player.hidden; // variável hidden do player
-var can_see_player = (dist < vision_range) && (angle_diff < vision_angle / 2) && !player_hidden;
+var player = obj_player;
+
+// REGRA DE NEGÓCIO PRINCIPAL
+if (player.form == "human") {
+    var can_see_player = false;
+} else {
+    var player_hidden = player.hidden;
+    var can_see_player = (dist < vision_range) && (angle_diff < vision_angle / 2) && !player_hidden;
+}
 
 // --- STATE MACHINE ---
 switch (state) {
