@@ -1,8 +1,8 @@
 {
   "FolderOrderSettings":[
-    {"name":"Scripts","order":8,"path":"folders/Scripts.yy",},
     {"name":"Objects","order":1,"path":"folders/Objects.yy",},
     {"name":"Rooms","order":3,"path":"folders/Rooms.yy",},
+    {"name":"Scripts","order":8,"path":"folders/Scripts.yy",},
     {"name":"Sprite","order":2,"path":"folders/Sprite.yy",},
     {"name":"Tileset","order":6,"path":"folders/Tileset.yy",},
   ],
@@ -17,7 +17,8 @@
     {"name":"Object7","order":7,"path":"objects/Object7/Object7.yy",},
     {"name":"par_enemy","order":4,"path":"objects/par_enemy/par_enemy.yy",},
     {"name":"rm_Gameover","order":1,"path":"rooms/rm_Gameover/rm_Gameover.yy",},
-    {"name":"spr_arbusto","order":14,"path":"sprites/spr_arbusto/spr_arbusto.yy",},
+    {"name":"spr_arbusto1","order":17,"path":"sprites/spr_arbusto1/spr_arbusto1.yy",},
+    {"name":"spr_arbustoescondido","order":18,"path":"sprites/spr_arbustoescondido/spr_arbustoescondido.yy",},
     {"name":"spr_ataque","order":5,"path":"sprites/spr_ataque/spr_ataque.yy",},
     {"name":"spr_bgmuro","order":8,"path":"sprites/spr_bgmuro/spr_bgmuro.yy",},
     {"name":"spr_bgpredio","order":7,"path":"sprites/spr_bgpredio/spr_bgpredio.yy",},

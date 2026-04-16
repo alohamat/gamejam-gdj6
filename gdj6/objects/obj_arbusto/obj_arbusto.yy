@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"obj_arbusto",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_arbusto",
   "overriddenProperties":[],
@@ -28,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_arbusto",
-    "path":"sprites/spr_arbusto/spr_arbusto.yy",
+    "name":"spr_arbusto1",
+    "path":"sprites/spr_arbusto1/spr_arbusto1.yy",
   },
   "spriteMaskId":null,
   "visible":true,
