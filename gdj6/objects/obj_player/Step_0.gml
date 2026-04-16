@@ -105,3 +105,14 @@ depth =-99999
 if (HP <=0){
 	(room_goto(rm_Gameover))
 }
+
+// --- ESCONDER ---
+// Esconder no arbusto
+if place_meeting(x, y, obj_arbusto) && keyboard_check_pressed(vk_up) {
+    hidden = true;
+}
+
+// Sair do arbusto (qualquer direção ou botão que faça sentido)
+if !place_meeting(x, y, obj_arbusto) {
+    hidden = false;
+}

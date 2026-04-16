@@ -30,6 +30,7 @@
   },
   "name":"gdj6",
   "resources":[
+    {"id":{"name":"obj_arbusto","path":"objects/obj_arbusto/obj_arbusto.yy",},},
     {"id":{"name":"obj_ataque","path":"objects/obj_ataque/obj_ataque.yy",},},
     {"id":{"name":"obj_chao","path":"objects/obj_chao/obj_chao.yy",},},
     {"id":{"name":"obj_guarda","path":"objects/obj_guarda/obj_guarda.yy",},},
@@ -39,6 +40,7 @@
     {"id":{"name":"par_enemy","path":"objects/par_enemy/par_enemy.yy",},},
     {"id":{"name":"rm_Gameover","path":"rooms/rm_Gameover/rm_Gameover.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"spr_arbusto","path":"sprites/spr_arbusto/spr_arbusto.yy",},},
     {"id":{"name":"spr_ataque","path":"sprites/spr_ataque/spr_ataque.yy",},},
     {"id":{"name":"spr_bgmuro","path":"sprites/spr_bgmuro/spr_bgmuro.yy",},},
     {"id":{"name":"spr_bgpredio","path":"sprites/spr_bgpredio/spr_bgpredio.yy",},},
@@ -46,6 +48,7 @@
     {"id":{"name":"spr_enemy_hit","path":"sprites/spr_enemy_hit/spr_enemy_hit.yy",},},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
     {"id":{"name":"spr_gameover","path":"sprites/spr_gameover/spr_gameover.yy",},},
+    {"id":{"name":"spr_guarda_alertado","path":"sprites/spr_guarda_alertado/spr_guarda_alertado.yy",},},
     {"id":{"name":"spr_mask","path":"sprites/spr_mask/spr_mask.yy",},},
     {"id":{"name":"spr_neblina","path":"sprites/spr_neblina/spr_neblina.yy",},},
     {"id":{"name":"spr_parede","path":"sprites/spr_parede/spr_parede.yy",},},
