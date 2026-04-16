@@ -1,5 +1,6 @@
 {
   "FolderOrderSettings":[
+    {"name":"Scripts","order":8,"path":"folders/Scripts.yy",},
     {"name":"Objects","order":1,"path":"folders/Objects.yy",},
     {"name":"Rooms","order":3,"path":"folders/Rooms.yy",},
     {"name":"Sprite","order":2,"path":"folders/Sprite.yy",},
@@ -12,6 +13,7 @@
     {"name":"obj_guarda","order":5,"path":"objects/obj_guarda/obj_guarda.yy",},
     {"name":"obj_parede","order":1,"path":"objects/obj_parede/obj_parede.yy",},
     {"name":"obj_phase_controller","order":7,"path":"objects/obj_phase_controller/obj_phase_controller.yy",},
+    {"name":"obj_phase_trigger","order":8,"path":"objects/obj_phase_trigger/obj_phase_trigger.yy",},
     {"name":"Object7","order":7,"path":"objects/Object7/Object7.yy",},
     {"name":"par_enemy","order":4,"path":"objects/par_enemy/par_enemy.yy",},
     {"name":"rm_Gameover","order":1,"path":"rooms/rm_Gameover/rm_Gameover.yy",},

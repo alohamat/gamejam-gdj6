@@ -192,5 +192,7 @@ else {
     }
 }
 
+show_debug_message(string(form));
 y = round(y);
 depth = -99999;
+

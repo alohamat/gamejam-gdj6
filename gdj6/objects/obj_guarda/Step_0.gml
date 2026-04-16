@@ -16,7 +16,7 @@ if (player.form == "human") {
     var can_see_player = false;
 } else {
     var player_hidden = player.hidden;
-    var can_see_player = (dist < vision_range) && (angle_diff < vision_angle / 2) && !player_hidden;
+    var can_see_player = (dist < vision_range) && (angle_diff < vision_angle / 2) && !player_hidden && !(player.form == "human");
 }
 
 // --- STATE MACHINE ---
