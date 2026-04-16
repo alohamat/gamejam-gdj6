@@ -31,7 +31,7 @@ if (wall_jump_timer > 0) {
 
 // --- MOVIMENTO HORIZONTAL ---
 move = -keyboard_check(vk_left) + keyboard_check(vk_right);
-if hit=0
+if hit==0
 {
 if is_climbing || place_meeting(x, y+1, obj_chao) {
     hsp = spd * move;
@@ -50,8 +50,9 @@ x += hsp;
 // --- PULO E GRAVIDADE ---
 if place_meeting(x, y+1, obj_chao) {
 	wall_jump_timer = 0;
-    if attack == 0 && keyboard_check_pressed(ord("Z")) {
-        vsp = -7;
+	if (attack == 0 && hit == 0 && keyboard_check_pressed(ord("Z"))) {
+    vsp = -7;
+	
     }
 } else if is_climbing {
     vsp = -2 * keyboard_check(vk_up) + 2 * keyboard_check(vk_down);
@@ -80,17 +81,27 @@ if place_meeting(x, y+vsp, obj_chao) || place_meeting(x, y+vsp, obj_parede) {
 y += vsp;
 
 // --- VIRAR SPRITE ---
-if move != 0 && attack == 0 && !is_climbing {
+if move != 0 && attack == 0 && !is_climbing && hit==0{
     image_xscale = move;
 }
 
 y = round(y);
 
 // --- ATACAR ---
-if keyboard_check_pressed(ord("X")) && attack == 0 {
+if keyboard_check_pressed(ord("X")) && attack == 0 && hit==0{
     attack = 1;
     var d = instance_create_depth(x, y, depth-1, obj_ataque);
     d.x = x;
     d.y = y;
     d.image_xscale = image_xscale;
+}
+
+if hitcool > 0{hitcool-=1}
+
+if hit=0{sprite_index=spr_player}
+
+depth =-99999
+
+if (HP <=0){
+	(room_goto(rm_Gameover))
 }

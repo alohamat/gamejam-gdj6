@@ -1,4 +1,4 @@
 event_inherited()
-HP=10
-STR=1
+HP=15
+STR=20
 hitsprite=spr_enemy_hit
