@@ -1,3 +1,5 @@
+event_inherited();
+
 enum GUARD_STATE {
     PATROL,
     ALERT,

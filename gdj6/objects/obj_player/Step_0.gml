@@ -8,6 +8,8 @@ if (hitcool > 0) {
 
 if (HP <= 0) {
     room_goto(rm_Gameover);
+	instance_destroy();
+	exit;
 }
 
 // verifica se mudou de posição
