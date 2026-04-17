@@ -1,4 +1,5 @@
 // countdown
+image_alpha = 0;
 if (cooldown > 0) {
     cooldown--;
 }

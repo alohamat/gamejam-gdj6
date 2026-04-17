@@ -39,7 +39,7 @@ if (keyboard_check_pressed(vk_up) && !(form == "human")) {
 }
 
 // Reset básico
-can_stand = !place_meeting(x, y - 50, obj_chao) && !place_meeting(x, y - 50, obj_parede);
+can_stand = !place_meeting(x, y - 50, obj_dut) && !place_meeting(x, y - 50, obj_parede);
 
 move = -keyboard_check(vk_left) + keyboard_check(vk_right);
 
@@ -59,15 +59,15 @@ if (form == "human") {
 
     // Movimento horizontal simples
     if (hit == 0) {
-        if (place_meeting(x, y + 1, obj_chao)) {
+        if (place_meeting(x, y + 1, obj_dut)) {
             hsp = spd * move;
         } else {
             hsp += (spd * move - hsp) * 0.1;
         }
     }
 
-    if (place_meeting(x + hsp, y, obj_chao) || place_meeting(x + hsp, y, obj_parede)) {
-        while (!place_meeting(x + sign(hsp), y, obj_chao) && !place_meeting(x + sign(hsp), y, obj_parede)) {
+    if (place_meeting(x + hsp, y, obj_dut) || place_meeting(x + hsp, y, obj_parede)) {
+        while (!place_meeting(x + sign(hsp), y, obj_dut) && !place_meeting(x + sign(hsp), y, obj_parede)) {
             x += sign(hsp);
         }
         hsp = 0;
@@ -75,7 +75,7 @@ if (form == "human") {
     x += hsp;
 
     // Gravidade / pulo normal
-    if (place_meeting(x, y + 1, obj_chao)) {
+    if (place_meeting(x, y + 1, obj_dut)) {
         wall_jump_timer = 0;
         if (keyboard_check_pressed(ord("Z"))) {
             vsp = jump_power;
@@ -85,8 +85,8 @@ if (form == "human") {
     }
 
     // Movimento vertical
-    if (place_meeting(x, y + vsp, obj_chao) || place_meeting(x, y + vsp, obj_parede)) {
-        while (!place_meeting(x, y + sign(vsp), obj_chao) && !place_meeting(x, y + sign(vsp), obj_parede)) {
+    if (place_meeting(x, y + vsp, obj_dut) || place_meeting(x, y + vsp, obj_parede)) {
+        while (!place_meeting(x, y + sign(vsp), obj_dut) && !place_meeting(x, y + sign(vsp), obj_parede)) {
             y += sign(vsp);
         }
         vsp = 0;
@@ -128,15 +128,15 @@ else {
 
     // Movimento horizontal
     if (hit == 0) {
-        if (is_climbing || place_meeting(x, y + 1, obj_chao)) {
+        if (is_climbing || place_meeting(x, y + 1, obj_dut)) {
             hsp = spd * move;
         } else {
             hsp += (spd * move - hsp) * 0.1;
         }
     }
 
-    if (place_meeting(x + hsp, y, obj_chao) || place_meeting(x + hsp, y, obj_parede)) {
-        while (!place_meeting(x + sign(hsp), y, obj_chao) && !place_meeting(x + sign(hsp), y, obj_parede)) {
+    if (place_meeting(x + hsp, y, obj_dut) || place_meeting(x + hsp, y, obj_parede)) {
+        while (!place_meeting(x + sign(hsp), y, obj_dut) && !place_meeting(x + sign(hsp), y, obj_parede)) {
             x += sign(hsp);
         }
         hsp = 0;
@@ -152,7 +152,7 @@ else {
     }
 
     // Vertical / pulo / gravidade
-    if (place_meeting(x, y + 1, obj_chao)) {
+    if (place_meeting(x, y + 1, obj_dut)) {
         wall_jump_timer = 0;
 
         if (attack == 0 && hit == 0 && !is_crouching && keyboard_check_pressed(ord("Z"))) {
@@ -178,8 +178,8 @@ else {
         vsp += 0.3;
     }
 
-    if (place_meeting(x, y + vsp, obj_chao) || place_meeting(x, y + vsp, obj_parede)) {
-        while (!place_meeting(x, y + sign(vsp), obj_chao) && !place_meeting(x, y + sign(vsp), obj_parede)) {
+    if (place_meeting(x, y + vsp, obj_dut) || place_meeting(x, y + vsp, obj_parede)) {
+        while (!place_meeting(x, y + sign(vsp), obj_dut) && !place_meeting(x, y + sign(vsp), obj_parede)) {
             y += sign(vsp);
         }
         vsp = 0;

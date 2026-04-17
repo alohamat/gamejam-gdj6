@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_chao",
+  "%Name":"obj_dut",
   "eventList":[],
   "managed":true,
-  "name":"obj_chao",
+  "name":"obj_dut",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
