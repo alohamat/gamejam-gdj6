@@ -1,4 +1,4 @@
-if hit=0 && hitcool =0 && !(form == "human")
+if hit=0 && hitcool =0 && !(form == "human") && !(hidden)
 {
 	hit=1
 	sprite_index=spr_playerhit

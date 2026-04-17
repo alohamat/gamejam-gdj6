@@ -28,7 +28,7 @@ y_prev = y;
 // Esconder no arbusto
 if (keyboard_check_pressed(vk_up) && !(form == "human")) {
     if (!hidden) {
-        if (place_meeting(x, y, obj_arbusto)) {
+        if (place_meeting(x, y, obj_arbusto)) || (place_meeting(x, y, obj_vent)) {
             hidden = true;
             scr_esconder();
         }
