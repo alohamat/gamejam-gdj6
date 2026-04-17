@@ -19,6 +19,7 @@
     {"name":"obj_phase_controller","order":7,"path":"objects/obj_phase_controller/obj_phase_controller.yy",},
     {"name":"obj_phase_trigger","order":8,"path":"objects/obj_phase_trigger/obj_phase_trigger.yy",},
     {"name":"obj_sec_camera","order":12,"path":"objects/obj_sec_camera/obj_sec_camera.yy",},
+    {"name":"obj_spawn_point","order":14,"path":"objects/obj_spawn_point/obj_spawn_point.yy",},
     {"name":"Object7","order":7,"path":"objects/Object7/Object7.yy",},
     {"name":"par_enemy","order":4,"path":"objects/par_enemy/par_enemy.yy",},
     {"name":"rm_Gameover","order":1,"path":"rooms/rm_Gameover/rm_Gameover.yy",},

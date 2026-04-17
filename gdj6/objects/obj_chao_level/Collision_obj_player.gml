@@ -6,3 +6,6 @@ if (room == Room1) {
 } else {
     room_goto(Room1);
 }
+
+global.fase += 1;
+global.num_guardas = floor(global.fase / 2); 
