@@ -39,7 +39,7 @@ if (keyboard_check_pressed(vk_up) && !(form == "human")) {
 }
 
 // Reset básico
-can_stand = !place_meeting(x, y - 5, obj_chao) && !place_meeting(x, y - 35, obj_parede);
+can_stand = !place_meeting(x, y - 50, obj_chao) && !place_meeting(x, y - 50, obj_parede);
 
 move = -keyboard_check(vk_left) + keyboard_check(vk_right);
 
