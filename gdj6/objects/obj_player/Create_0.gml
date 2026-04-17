@@ -1,11 +1,15 @@
 hsp = 0;
 vsp = 0;
 
+x_prev = x;
+y_prev = y;
+
 attack = 0;
 hit = 0;
 hitcool = 50;
 
 hidden = false;
+arbusto_atual = noone;
 HP = 100;
 
 is_crouching = false;

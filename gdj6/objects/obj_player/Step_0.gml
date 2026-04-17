@@ -9,16 +9,34 @@ if (hitcool > 0) {
 if (HP <= 0) {
     room_goto(rm_Gameover);
 }
+// verifica se mudou de posição
+var moving = (x != x_prev) || (y != y_prev);
 
-// Esconder no arbusto
-if (place_meeting(x, y, obj_arbusto)) {
-    if (keyboard_check_pressed(vk_up)) {
-        hidden = true;
-    }
-} else {
+if (hidden && moving) {
     hidden = false;
+    scr_aparecer();
 }
 
+// atualiza posição
+x_prev = x;
+y_prev = y;
+
+// Esconder no arbusto
+if (keyboard_check_pressed(vk_up)) {
+    
+    if (!hidden) {
+        // tentar esconder
+        if (place_meeting(x, y, obj_arbusto)) {
+            hidden = true;
+            scr_esconder();
+        }
+        
+    } else {
+        // sair do arbusto na hora
+        hidden = false;
+        scr_aparecer();
+    }
+}
 // Reset básico
 can_stand = !place_meeting(x, y - 1, obj_chao);
 

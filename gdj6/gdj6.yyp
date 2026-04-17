@@ -43,6 +43,8 @@
     {"id":{"name":"par_enemy","path":"objects/par_enemy/par_enemy.yy",},},
     {"id":{"name":"rm_Gameover","path":"rooms/rm_Gameover/rm_Gameover.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"scr_aparecer","path":"scripts/scr_aparecer/scr_aparecer.yy",},},
+    {"id":{"name":"scr_esconder","path":"scripts/scr_esconder/scr_esconder.yy",},},
     {"id":{"name":"scr_toggle_phase","path":"scripts/scr_toggle_phase/scr_toggle_phase.yy",},},
     {"id":{"name":"spr_arbusto1","path":"sprites/spr_arbusto1/spr_arbusto1.yy",},},
     {"id":{"name":"spr_arbustoescondido","path":"sprites/spr_arbustoescondido/spr_arbustoescondido.yy",},},
