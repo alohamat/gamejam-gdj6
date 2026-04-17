@@ -11,11 +11,11 @@ if (place_meeting(x, y, obj_player)) {
         var controller = instance_find(obj_phase_controller, 0);
 
         // troca fase
-        if (controller.phase == 0) {
-            controller.phase = 1;
-        } else {
-            controller.phase = 0;
-        }
+        //if (controller.phase == 0) {
+        //    controller.phase = 1;
+        //} else {
+        //    controller.phase = 0;
+        //}
 
         // broadcast
         with (obj_player) {

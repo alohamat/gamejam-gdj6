@@ -1,3 +1,11 @@
+if (variable_global_exists("phase_instance")) {
+	instance_destroy(self);
+	exit;
+}
+else {
+	global.phase_instance = self;
+}
+
 enum Phase {
     DAY,
     NIGHT
