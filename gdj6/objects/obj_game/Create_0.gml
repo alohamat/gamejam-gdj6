@@ -1,1 +1,1 @@
-night = 1;
+traps = ds_list_create(); // lista de ds_maps, uma por trap

@@ -198,6 +198,18 @@ else {
     }
 }
 
-show_debug_message(string(form));
+// Exemplo: spawnar espinho onde o mouse tá
+if (mouse_check_button_pressed(mb_left)) {
+    var trap_obj = obj_sec_camera; // ou obj_camera_seguranca
+    var inst = instance_create_layer(mouse_x, mouse_y, "Instances", trap_obj);
+    
+    // Salva no obj_game
+    var data = ds_map_create();
+    data[? "type"] = trap_obj;
+    data[? "x"]    = mouse_x;
+    data[? "y"]    = mouse_y;
+    ds_list_add(obj_game.traps, data);
+}
+
 y = round(y);
 depth = -99999;
