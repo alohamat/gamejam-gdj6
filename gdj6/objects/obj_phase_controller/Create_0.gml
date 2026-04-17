@@ -15,3 +15,4 @@ phase = Phase.DAY;
 
 day_number = 1;
 night_number = 0;
+guarda_vivo = true;
