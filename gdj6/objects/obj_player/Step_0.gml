@@ -9,6 +9,7 @@ if (hitcool > 0) {
 if (HP <= 0) {
     room_goto(rm_Gameover);
 }
+
 // verifica se mudou de posição
 var moving = (x != x_prev) || (y != y_prev);
 
@@ -23,22 +24,19 @@ y_prev = y;
 
 // Esconder no arbusto
 if (keyboard_check_pressed(vk_up) && !(form == "human")) {
-    
     if (!hidden) {
-        // tentar esconder
         if (place_meeting(x, y, obj_arbusto)) {
             hidden = true;
             scr_esconder();
         }
-        
     } else {
-        // sair do arbusto na hora
         hidden = false;
         scr_aparecer();
     }
 }
+
 // Reset básico
-can_stand = !place_meeting(x, y - 1, obj_chao);
+can_stand = !place_meeting(x, y - 1, obj_chao) && !place_meeting(x, y - 1, obj_parede);
 
 move = -keyboard_check(vk_left) + keyboard_check(vk_right);
 
@@ -48,28 +46,13 @@ move = -keyboard_check(vk_left) + keyboard_check(vk_right);
 if (form == "human") {
 
     attack = 0;
+    is_crouching = false;
     is_climbing = false;
     wall_jump_timer = 0;
 
-    // Crouch
-    if (keyboard_check_pressed(ord("C")) && !(form == "human")) {
-        if (is_crouching && can_stand) {
-            is_crouching = false;
-            y -= 8;
-        } else if (!is_crouching) {
-            is_crouching = true;
-        }
-    }
-
-    if (is_crouching) {
-        mask_index = spr_player_rastejando;
-        sprite_index = spr_player_rastejando;
-        spd = 1.3;
-    } else {
-        mask_index = spr_player_human;
-        sprite_index = spr_player_human;
-        spd = spd_human;
-    }
+    mask_index = spr_player_human;
+    sprite_index = spr_player_human;
+    spd = spd_human;
 
     // Movimento horizontal simples
     if (hit == 0) {
@@ -91,7 +74,6 @@ if (form == "human") {
     // Gravidade / pulo normal
     if (place_meeting(x, y + 1, obj_chao)) {
         wall_jump_timer = 0;
-
         if (keyboard_check_pressed(ord("Z"))) {
             vsp = jump_power;
         }
@@ -112,11 +94,6 @@ if (form == "human") {
     if (move != 0 && hit == 0) {
         image_xscale = move;
     }
-
-    // Armadilha
-    if (mouse_check_button_pressed(mb_left)) {
-        // instance_create_layer(mouse_x, mouse_y, "Instances", obj_trap);
-    }
 }
 
 // =====================================================
@@ -124,12 +101,27 @@ if (form == "human") {
 // =====================================================
 else {
 
-    // Estado do lobo
-    is_crouching = false;
-
     mask_index = spr_player;
-    sprite_index = spr_player; // troca depois por sprite próprio do lobo, se tiver
+    sprite_index = spr_player;
     spd = spd_werewolf;
+
+    // Crouch — só o lobisomem agacha
+    if (keyboard_check_pressed(ord("C"))) {
+    if (is_crouching && can_stand) {
+        is_crouching = false;
+        y -= 8;
+    } else if (!is_crouching) {
+        is_crouching = true;
+        is_climbing = false; // <- cancela o climb
+        wall_jump_timer = 30; // <- dá o timer pra não grudar de volta imediatamente
+    }
+}
+
+    if (is_crouching) {
+        mask_index = spr_player_rastejando;
+        sprite_index = spr_player_rastejando;
+        spd = 1.3;
+    }
 
     // Movimento horizontal
     if (hit == 0) {
@@ -160,7 +152,7 @@ else {
     if (place_meeting(x, y + 1, obj_chao)) {
         wall_jump_timer = 0;
 
-        if (attack == 0 && hit == 0 && keyboard_check_pressed(ord("Z"))) {
+        if (attack == 0 && hit == 0 && !is_crouching && keyboard_check_pressed(ord("Z"))) {
             vsp = jump_power;
         }
 
@@ -196,7 +188,7 @@ else {
         image_xscale = move;
     }
 
-    // Ataque só no lobisomem
+    // Ataque
     if (keyboard_check_pressed(ord("X")) && attack == 0 && hit == 0) {
         attack = 1;
         var d = instance_create_depth(x, y, depth - 1, obj_ataque);
@@ -204,13 +196,8 @@ else {
         d.y = y;
         d.image_xscale = image_xscale;
     }
-
-    if (mouse_check_button_pressed(mb_left)) {
-        // nada aqui no lobo, ou outra habilidade depois
-    }
 }
 
 show_debug_message(string(form));
 y = round(y);
 depth = -99999;
-

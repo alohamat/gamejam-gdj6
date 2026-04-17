@@ -33,7 +33,10 @@
   "resources":[
     {"id":{"name":"obj_arbusto","path":"objects/obj_arbusto/obj_arbusto.yy",},},
     {"id":{"name":"obj_ataque","path":"objects/obj_ataque/obj_ataque.yy",},},
+    {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
+    {"id":{"name":"obj_chao_level","path":"objects/obj_chao_level/obj_chao_level.yy",},},
     {"id":{"name":"obj_chao","path":"objects/obj_chao/obj_chao.yy",},},
+    {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
     {"id":{"name":"obj_guarda","path":"objects/obj_guarda/obj_guarda.yy",},},
     {"id":{"name":"obj_parede","path":"objects/obj_parede/obj_parede.yy",},},
     {"id":{"name":"obj_phase_controller","path":"objects/obj_phase_controller/obj_phase_controller.yy",},},
@@ -42,6 +45,7 @@
     {"id":{"name":"Object7","path":"objects/Object7/Object7.yy",},},
     {"id":{"name":"par_enemy","path":"objects/par_enemy/par_enemy.yy",},},
     {"id":{"name":"rm_Gameover","path":"rooms/rm_Gameover/rm_Gameover.yy",},},
+    {"id":{"name":"rm_predio","path":"rooms/rm_predio/rm_predio.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"scr_aparecer","path":"scripts/scr_aparecer/scr_aparecer.yy",},},
     {"id":{"name":"scr_esconder","path":"scripts/scr_esconder/scr_esconder.yy",},},
@@ -51,6 +55,7 @@
     {"id":{"name":"spr_ataque","path":"sprites/spr_ataque/spr_ataque.yy",},},
     {"id":{"name":"spr_bgmuro","path":"sprites/spr_bgmuro/spr_bgmuro.yy",},},
     {"id":{"name":"spr_bgpredio","path":"sprites/spr_bgpredio/spr_bgpredio.yy",},},
+    {"id":{"name":"spr_chao_level","path":"sprites/spr_chao_level/spr_chao_level.yy",},},
     {"id":{"name":"spr_chao","path":"sprites/spr_chao/spr_chao.yy",},},
     {"id":{"name":"spr_enemy_hit","path":"sprites/spr_enemy_hit/spr_enemy_hit.yy",},},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
@@ -71,6 +76,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"rm_Gameover","path":"rooms/rm_Gameover/rm_Gameover.yy",},},
+    {"roomId":{"name":"rm_predio","path":"rooms/rm_predio/rm_predio.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

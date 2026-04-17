@@ -7,6 +7,8 @@ y_prev = y;
 attack = 0;
 hit = 0;
 hitcool = 50;
+came_from = room;
+spd = 1
 
 hidden = false;
 arbusto_atual = noone;
