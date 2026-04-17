@@ -22,7 +22,7 @@ x_prev = x;
 y_prev = y;
 
 // Esconder no arbusto
-if (keyboard_check_pressed(vk_up)) {
+if (keyboard_check_pressed(vk_up) && !(form == "human")) {
     
     if (!hidden) {
         // tentar esconder
